@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             
+             x:Class="bronzetti.christian._4h.gatto2.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0">
+            <Button
+                x:Name="btnCarica" 
+                Clicked="btnCarica_Clicked" 
+                WidthRequest="100" 
+                HeightRequest="100"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="Start"
+                BackgroundColor="Beige"
+                Text="Disegna gatto da csv"
+                FontAttributes="Bold"
+                FontSize="Caption"
+                Margin="5"
+                >
+            </Button>
+        </StackLayout>
+        
+        <Button 
+                x:Name="btnCaricaDisegno"
+                Clicked="btnCaricaDisegno_Clicked"
+                HeightRequest="120"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="Beige"
+                FontSize="Caption"
+                FontAttributes="Bold"
+                BorderColor="Gray"
+                Margin="5"
+                Text="Apri File"
+                />
+
+       
+        
+        <skia:SKCanvasView Grid.Row="1" x:Name="telaDisegno" RotationX="180" PaintSurface="SKCanvasView_PaintSurface"></skia:SKCanvasView>
+    </Grid>
+    
+
+</ContentPage>
